@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Slider</title>
+
+     <style>
+          *{
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+               font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          }
+          
+          body{
+               background-color: #070c15;
+          }
+          .box{
+               position:relative;
+               width:500px;
+               height: 500px;
+               margin:70px auto;
+          }
+          .box textarea{
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
+               max-width: 100%;
+               height: 100%;
+               background:url(img/image6.png);
+               opacity: 0.5;
+               filter: grayscale(1);
+               resize: none;
+               border: none;
+               
+          }
+          .box textarea:nth-child(2){
+               filter: grayscale(0);
+               width: 200px;
+               opacity: 1;
+               resize: horizontal;/*Para que el textarea solo puede modificar de forma horizontal*/
+               border-right: 2px solid #FFF; /*Creo la linea divisoria*/
+          }
+         
+         
+
+
+     </style>
+
+
+
+</head>
+<body>
+     <div class="box">
+          <textarea>readonly</textarea>
+          <textarea>readonly</textarea>
+     </div>
+</body>
+</html>
