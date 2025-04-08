@@ -265,3 +265,113 @@ header button{
     font-weight: 100;
     text-shadow: 5px 0 10 px #000;
 }
+/** DESTACADOS / FAVORITOS **/
+
+.favorito{
+    padding: 20px 150px;
+    height: 100vh;
+    position: relative;
+
+}
+/*Para crear un circulito Best lo creamos con un pseudoelemento*/
+.favorito::before{
+    content: 'Tegnology';
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    font-weight: 600;
+    font-size: 10vw;
+    color: rgba(0, 0, 0, 0.1);
+    z-index: -1;
+
+}
+
+.favorito::after{
+    content: 'Best';
+    position: absolute;
+    top: 2%;
+    right: 0;
+    font-weight: 600;
+    font-size: 10vw;
+    color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+
+}
+/*centrado de productos*/
+.container-favorito > div{ /*Hijo directo del conteido favo*/
+    float: left;
+    margin: 30px;
+}
+.imagen-fav{
+    width: 40%;
+    position: relative;
+}
+.imagen-fav img{
+    width: 100%;
+    height: 100%;
+    transition:all .5s;
+}
+.imagen-fav::before{
+    content: 'Best Choose';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--color-secundario);
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 50%;
+    color: white;
+    transform: rotate(-10deg);
+    box-shadow: 0 0 10px 5px var(--color-secundario);
+    z-index: -1;
+    transition: all .5s;
+}
+/*imagenes efecto hover*/
+.imagen-fav:hover::before{
+    transform: scale(1.2);
+}
+.container-favorito:hover .imagen-fav img{
+    transform: scale(1.1);
+}
+
+
+
+
+
+.content-fav{/*Esto se va porque le asignamos container-favorito: un float lef y necesita un tamaño*/
+    width: 40%; 
+    height: 100%;
+}
+.content-fav h1{
+    font-size: 40px;
+    font-weight: 400;
+}
+.content-fav h3{
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--color-secundario);
+}
+.content-fav .text p{
+    text-align: justify;
+    margin: 20px 0;
+}
+.content-inferior {
+    width: 100%;
+    height: 100%;
+}
+.content-inferior  .price{
+    float: left;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 600;
+    color: var(--color-oscuro);
+}
+.content-inferior .buy{
+    float: right;
+    width: 150px;
+    line-height: 50px;
+    text-align: center;
+}
