@@ -1,0 +1,21 @@
+ .flex-container{
+     background: gainsboro;
+     padding: 20px;
+     border: 2px solid #000;
+}
+
+.flex-h{
+     height: 500px;
+}
+
+.items{
+     background: #21aef0;
+     width: 100px;
+     height: 100px;
+     line-height: 100px;
+     margin: 10px;
+     text-align: center;
+     font-size: 30px;
+     color: #FFF;
+     border: 2px solid #FFF;     
+}

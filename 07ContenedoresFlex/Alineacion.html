@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <link rel="stylesheet" href="estilos.css">
+
+     <style>
+          .flex-container{
+               display: flex;
+               flex-direction: row ; /*column*/
+
+
+               /* APLICAR DIRECCION AL EJE PRINCIPAL Y SECUNDARIO */
+
+               /* Aplicar al eje principal */
+               justify-content: flex-start;
+               justify-content: flex-end;
+               justify-content: space-around;
+               justify-content: space-between;
+               justify-content: center;
+
+               /* Aplicar al eje secundario */
+               align-items: flex-start;
+               align-items: flex-end; /*abajo*/
+               align-items: stretch; /*Se estiran*/
+               align-items: center; /*Centran el contenido*/
+
+
+          }
+     </style>
+
+
+
+</head>
+<body>
+     <div class="flex-container flex-h">
+          <div class="items">1</div>
+          <div class="items">2</div>
+          <div class="items">3</div>
+     </div>
+</body>
+</html>

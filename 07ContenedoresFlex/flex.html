@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <link rel="stylesheet" href="estilos.css">
+
+     <style>
+          .flex-container{
+               display: flex;
+               justify-content: center;
+               align-items: center;
+          }
+
+          .items:nth-child(1){
+              background: #21aef0;
+              flex-grow: 0;
+              flex-shrink: 0;
+          }
+
+          .items:nth-child(2){
+               background: #21f032;
+               flex-grow: 5;
+               flex-shrink: 10;
+          }
+
+          .items:nth-child(3){
+               background: #f08521;
+               flex-grow: 2;
+               flex-shrink:5;
+               flex-basis: 200px;
+
+               /* ATAJO */
+               flex: 10 20 auto;
+
+          }
+
+          .items:nth-child(4){
+               background: #f02182;
+               flex-grow: 0;
+               flex-shrink: 0;
+          }
+
+
+     </style>
+
+</head>
+<body>
+     <div class="flex-container flex-h">
+          <div class="items">1</div>
+          <div class="items">2</div>
+          <div class="items">3</div>
+          <div class="items">4</div>
+     </div>
+</body>
+</html>

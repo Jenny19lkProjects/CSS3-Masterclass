@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <link rel="stylesheet" href="estilos.css">
+
+     <style>
+          .flex-container{
+               /* Aplicando flexbox */
+               display: flex;
+               flex-flow: row nowrap;
+               justify-content: center;
+               align-items: center; 
+          }
+
+          /* ALINEACIONES ESPECIFICAS A ELEMENTOS HIJO */
+          .item2{
+               align-self: flex-start;
+               align-self: flex-end;
+               align-self: stretch;
+               align-self: center;
+          }
+     </style>
+
+
+</head>
+<body>
+     <div class="flex-container flex-h">
+          <div class="items item1">1</div>
+          <div class="items item2">2</div>
+          <div class="items item3">3</div>
+          <div class="items item4">4</div>
+     </div>
+</body>
+</html>
