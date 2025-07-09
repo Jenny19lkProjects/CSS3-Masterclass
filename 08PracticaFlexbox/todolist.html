@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>To Do List</title>
+
+     <style>
+          *{
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+               font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          }
+
+          body{
+               height: 100vh;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               background: #111;
+          }
+
+          .container{
+               background: #FFF;
+               width: 350px;
+          }
+
+          h2{
+               background: #03A9F4;
+               color: #FFF;
+               font-weight: 600;
+               text-transform: uppercase;
+               padding: 20px;
+          }
+
+
+          /* LISTA */
+          .list{
+               height: 500px;
+               overflow-y: auto;
+          }
+
+          .list::-webkit-scrollbar{
+               width: 5px;
+          }
+
+          .list::-webkit-scrollbar-thumb{
+               background: #03A9F4;
+               border-radius: 40px;
+          }
+
+
+          /* ITEMS */
+          .item{
+               padding: 20px;
+               border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+               transition: all .5s;
+          }
+
+          .item:last-child{
+               border-bottom: none;
+          }
+
+          .item:hover{
+               background: rgba(0, 0, 0, 0.1);
+          }
+
+          .item label{
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               cursor: pointer;
+          }
+
+          .item p{
+               font-size: 18px;
+               letter-spacing: 1px;
+               font-weight: 400;
+          }
+
+          .item span{
+               position: relative;
+               width: 30px;
+               height: 30px;
+               border: 1px solid #8B8B8B;
+               border-radius: 50%;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+          }
+
+          .item span::before{
+               content: '';
+               position: absolute;
+               width: 10px;
+               height: 5px;
+               border-left: 2px solid #8B8B8B;
+               border-bottom: 2px solid #8B8B8B;
+               transform: rotate(-40deg);
+          }
+
+
+          .item input{
+               display: none;
+          }
+
+
+          /* ESTADOS */
+          .item input:checked ~ p{
+               text-decoration: line-through;
+               color: #ccc;
+               font-weight: 600;
+          }
+
+
+          .item input:checked ~ span{
+               background: #03A9F4;
+               border: 1px solid #03A9F4;
+          }
+
+          .item input:checked ~ span::before{
+               border-left: 2px solid #FFF;
+               border-bottom: 2px solid #fff;
+          }
+
+
+     </style>
+
+
+</head>
+<body>
+     <div class="container">
+          <h2>To Do List</h2>
+          <div class="list">
+               <div class="item">
+                    <label>
+                         <input type="checkbox" name="" id="">
+                         <p>Comer</p>
+                         <span></span>
+                    </label>
+               </div>
+
+               <div class="item">
+                    <label>
+                         <input type="checkbox" name="" id="">
+                         <p>Programar</p>
+                         <span></span>
+                    </label>
+               </div>
+
+               <div class="item">
+                    <label>
+                         <input type="checkbox" name="" id="">
+                         <p>Leer</p>
+                         <span></span>
+                    </label>
+               </div>
+
+               <div class="item">
+                    <label>
+                         <input type="checkbox" name="" id="">
+                         <p>Compras</p>
+                         <span></span>
+                    </label>
+               </div>
+
+               <div class="item">
+                    <label>
+                         <input type="checkbox" name="" id="">
+                         <p>Ejercicio</p>
+                         <span></span>
+                    </label>
+               </div>
+
+               <div class="item">
+                    <label>
+                         <input type="checkbox" name="" id="">
+                         <p>Dormir</p>
+                         <span></span>
+                    </label>
+               </div>
+
+               <div class="item">
+                    <label>
+                         <input type="checkbox" name="" id="">
+                         <p>Comer</p>
+                         <span></span>
+                    </label>
+               </div>
+
+               <div class="item">
+                    <label>
+                         <input type="checkbox" name="" id="">
+                         <p>Comer</p>
+                         <span></span>
+                    </label>
+               </div>
+
+               <div class="item">
+                    <label>
+                         <input type="checkbox" name="" id="">
+                         <p>Comer</p>
+                         <span></span>
+                    </label>
+               </div>
+
+               <div class="item">
+                    <label>
+                         <input type="checkbox" name="" id="">
+                         <p>Comer</p>
+                         <span></span>
+                    </label>
+               </div>
+
+               <div class="item">
+                    <label>
+                         <input type="checkbox" name="" id="">
+                         <p>Comer</p>
+                         <span></span>
+                    </label>
+               </div>
+          </div>
+     </div>
+</body>
+</html>

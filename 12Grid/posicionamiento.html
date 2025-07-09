@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <link rel="stylesheet" href="estilos.css">
+
+     <style>
+          .grid{
+               display: grid;
+               grid-template-columns: repeat(4, 1fr);
+               grid-template-rows: repeat(3, 1fr);
+               gap: 20px;
+          }
+
+          .grid .item{
+              background-color: violet; 
+
+              /* POSICIONAR ELEMENTOS */
+              grid-column-start: 1;
+              grid-column-end: -1;
+              grid-row-start: 2;
+              grid-row-end: 3;
+
+
+              /* ATAJO 1: Valores de start y end */
+              grid-column: 1 / -1;
+              grid-row: 3 / 4;
+
+
+
+              /* ATAJO 2 
+               -Primer parametro row start
+		     -Segundo parametro column start
+		     -Tercer parametro row end
+		     -Cuarto parametro column end
+              */
+              grid-area: 3 / 2 / 5 / -1;
+              
+
+
+              /* ATAJO 3: EXPANDIR COLUMNAS Y FILAS */
+              grid-column: span 3;
+              grid-row: span 3;
+
+              
+          }
+
+     </style>
+
+</head>
+<body>
+	<div class="grid">
+		<div class="item">1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div>5</div>
+		<div>6</div>
+		<div>7</div>
+		<div>8</div>
+		<div>9</div>
+		<div>10</div>
+		<div>11</div>
+		<div>12</div>	
+	</div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Cards</title>
+
+ <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    }
+    body{
+        display:grid;
+        place-items: center; /*Centra todo el contenido de forma automatica*/
+        height:100vh;
+        background: #222;
+        
+    }
+    .grid-container{
+        width:1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap:10px;
+
+    }
+    .item{
+        color:#fff;
+        padding: 20px 40px 40px;
+        text-align:center; 
+    }
+    .item:nth-child(1){  /*eL NODO ITEM 1*/
+        background: linear-gradient(45deg,#036EB7,#64EAFF);
+    }
+    .item:nth-child(2){ 
+        background: linear-gradient(45deg, #8E1EE9, #ED55FF);
+    }
+    .item:nth-child(3){
+        background: linear-gradient(45deg, #FF0000, #FF5C85);
+    }
+
+    .item:nth-child(4){
+       background: linear-gradient(45deg, #FA9600, #f4c030);
+    }
+    .item h2{
+        font-size: 100px;
+        opacity: 0.4;
+    }
+
+    .item h3{
+        font-size: 24px;
+        text-transform: uppercase;
+    }
+
+ </style>
+</head>
+<body>
+     
+     <div class="grid-container">
+          <div class="item">
+               <h2>1</h2>
+               <h3>Lorem ipsum</h3>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, magni non labore quos provident pariatur possimus fugit ab nihil aliquam totam, earum facilis commodi quam hic enim tempora delectus. Aperiam!</p>
+          </div>
+
+          <div class="item">
+               <h2>2</h2>
+               <h3>Lorem ipsum</h3>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, magni non labore quos provident pariatur possimus fugit ab nihil aliquam totam, earum facilis commodi quam hic enim tempora delectus. Aperiam!</p>
+          </div>
+
+          <div class="item">
+               <h2>3</h2>
+               <h3>Lorem ipsum</h3>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, magni non labore quos provident pariatur possimus fugit ab nihil aliquam totam, earum facilis commodi quam hic enim tempora delectus. Aperiam!</p>
+          </div>
+
+          <div class="item">
+               <h2>4</h2>
+               <h3>Lorem ipsum</h3>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, magni non labore quos provident pariatur possimus fugit ab nihil aliquam totam, earum facilis commodi quam hic enim tempora delectus. Aperiam!</p>
+          </div>
+     </div>
+</body>
+</html>

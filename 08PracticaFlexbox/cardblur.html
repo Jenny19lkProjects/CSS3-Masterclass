@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Card Blur</title>
+     <link rel="stylesheet" href="fontawesome/css/all.css">
+
+     <style>
+          *{
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+               font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          }
+
+          body{
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               height: 100vh;
+               background: #E0F7FA;
+          }
+
+          .container{
+               display: flex;
+               justify-content: center;
+               align-items: center;
+          }
+
+
+          /* CARD */
+          .card{
+               position: relative;
+               width: 300px;
+               height: 400px;
+               margin: 20px;
+               border-radius: 15px;
+               box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               overflow: hidden;
+          }
+
+          .img{
+             width: 100%;
+             height: 100%;  
+          }
+
+          .img img{
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+               object-position: center;
+          }
+
+
+          /* CONTENIDO */
+          .content{
+              position: absolute; 
+              bottom: -160px;
+              width: 100%;
+              height: 160px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+              backdrop-filter: blur(15px);
+              transition: all .5s;
+          }
+
+          .card:hover .content{
+               bottom: 0;
+          }
+
+
+
+          /* TEXTO */
+          .content .text{
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               flex-direction: column;
+          }
+
+          .text h3, .text span{
+               color: #FFF;
+               text-transform: uppercase;
+               letter-spacing: 2px;
+               font-weight: 600;
+               font-size: 22px;
+               text-align: center;
+               transform: translateY(10px);
+               opacity: 0;
+               transition: all .5s;
+          }
+
+          .text span{
+               font-size: 12px;
+          }
+
+          .card:hover .text h3,
+          .card:hover .text span{
+               opacity: 1;
+          }
+
+
+
+          /* SOCIALES */
+          .sociales{
+               width: 60%;
+               margin: 20px 0;
+               display: flex;
+               justify-content: space-around;
+          }
+
+          .sociales a{
+               font-size: 20px;
+               color: #FFF;
+               transform: translateY(40px);
+               opacity: 0;
+               transition: all .5s;
+          }
+
+          .card:hover .sociales a{
+               transform: translateY(10px);
+               opacity: 1;
+          }
+
+          .sociales a:nth-child(1){
+               transition-delay: .2s;
+          }
+
+          .sociales a:nth-child(2){
+               transition-delay: .4s;
+          }
+
+          .sociales a:nth-child(3){
+               transition-delay: .6s;
+          }
+
+
+     </style>
+
+
+</head>
+<body>
+     <div class="container">
+          <div class="card">
+               <div class="img">
+                    <img src="img/image1.jpg" alt="">
+               </div>
+
+               <div class="content">
+                    <div class="text">
+                         <h3>Lorem Ipsum</h3>
+                         <span>Frontend web development</span>
+                    </div>
+               
+                    <div class="sociales">
+                         <a href=""><span class="fab fa-facebook-f"></span></a>
+                         <a href=""><span class="fab fa-twitter"></span></a>
+                         <a href=""><span class="fab fa-instagram"></span></a>
+                    </div>
+               </div>
+          </div>
+
+          <div class="card">
+               <div class="img">
+                    <img src="img/image2.jpg" alt="">
+               </div>
+
+               <div class="content">
+                    <div class="text">
+                         <h3>Lorem ipsum</h3>
+                         <span>Frontend web development</span>
+                    </div>
+               
+                    <div class="sociales">
+                         <a href=""><span class="fab fa-facebook-f"></span></a>
+                         <a href=""><span class="fab fa-twitter"></span></a>
+                         <a href=""><span class="fab fa-instagram"></span></a>
+                    </div>
+               </div>
+          </div>
+
+          <div class="card">
+               <div class="img">
+                    <img src="img/image3.jpg" alt="">
+               </div>
+
+               <div class="content">
+                    <div class="text">
+                         <h3>Lorem ipsum</h3>
+                         <span>Frontend web development</span>
+                    </div>
+               
+                    <div class="sociales">
+                         <a href=""><span class="fab fa-facebook-f"></span></a>
+                         <a href=""><span class="fab fa-twitter"></span></a>
+                         <a href=""><span class="fab fa-instagram"></span></a>
+                    </div>
+               </div>
+          </div>
+     </div>
+</body>
+</html>

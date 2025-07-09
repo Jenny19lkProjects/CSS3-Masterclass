@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+	<link rel="stylesheet" href="estilos.css">
+
+	<style>
+		.grid{
+			display: grid;
+			gap: 20px;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(5, 1fr);
+               grid-template-areas:     "header       header         header"
+                                        "contenido    contenido      aside"
+                                        "contenido    contenido      aside"
+                                        "widget1      widget2        aside"
+                                        "footer       footer         footer";
+		}
+
+		.grid .header{
+			background-color: gray;
+               grid-area: header;
+		}
+
+		.grid .aside{
+			background-color: orange;
+               grid-area: aside;
+		}
+
+		.grid .contenido{
+			background-color: #FFF;
+			color: #000;
+			border: none;
+               grid-area: contenido;
+		}
+
+		.grid .widget1{
+			background-color: greenyellow;
+               grid-area: widget1;
+		}
+
+		.grid .widget2{
+			background-color: greenyellow;
+               grid-area: widget2;
+		}
+
+		.grid .footer{
+			background-color: #3a3a3a;
+               grid-area: footer;
+		}
+
+	</style>
+
+</head>
+<body>
+     <div class="grid">
+		<div class="header">1</div>
+		<div class="aside">2</div>
+		<div class="contenido">3</div>
+		<div class="widget1">4</div>
+		<div class="widget2">5</div>
+		<div class="footer">6</div>
+	</div>
+</body>
+</html>

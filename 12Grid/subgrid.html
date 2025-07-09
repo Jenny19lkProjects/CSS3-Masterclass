@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>CSS GRID - Subgrid</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="fontawesome/css/all.css">
+	
+	<style>
+		
+		/* GENERALES */
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: sans-serif;
+		}
+
+		body{
+			background: #cccccc;
+			padding: 40px 0;
+		}
+
+
+		.contenedor {
+			width: 90%;
+			margin: auto;
+		}
+
+		.title {
+			color: #007ac0;
+			font-size: 25px;
+			padding: 20px;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+               grid-column: span 3;
+		}
+
+		.text {
+			line-height: 20px;
+			padding: 20px;
+			color: #111;
+               grid-column: span 3;
+		}
+
+
+		button {
+			border: none;
+			padding: 10px;
+			cursor: pointer;
+			color: #FFF;
+			text-transform: uppercase;
+			font-size: 12px;
+			font-weight: 600;
+		}
+
+		button.more{
+			background: #007ac0;
+		}
+
+		button.web{
+			background: #00c070;
+		}
+
+		button.follow{
+			background: #8a00c0;
+		}
+
+
+		/* CONTENEDOR GRID */
+		.grid-container {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 20px;
+
+               grid-template-rows: repeat(1, auto 1fr auto);
+               grid-template-columns: repeat(6, 1fr);	
+		}
+
+
+
+		/* POST */
+		.post {
+			background: #fff;
+			box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+
+               display: grid;
+               grid-row: span 3;
+               grid-template-rows: repeat(1, 100px 1fr auto);
+               grid-template-rows: subgrid;
+
+
+               grid-column: span 3;
+               grid-template-columns: subgrid;
+		}
+
+
+
+		/* BOTONES */
+		.post .btn {
+			border-top: 1px solid rgba(0, 0, 0, 0.2);
+			padding: 20px;
+               display: grid;
+               grid-template-columns: repeat(3, 1fr);
+               grid-template-columns: subgrid;
+               grid-column: span 3;
+		}
+
+
+
+	</style>
+
+
+</head>
+<body>
+	<div class="contenedor">
+		<div class="grid-container">
+			<div class="post">
+				<h2 class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id faucibus libero.</h2>
+				<p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id faucibus libero. Duis faucibus, lacus eget tempus posuere, urna arcu mollis arcu, non semper turpis lacus elementum odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id faucibus libero. Duis faucibus, lacus eget tempus posuere, urna arcu mollis arcu, non semper turpis lacus elementum odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id faucibus libero. Duis faucibus, lacus eget tempus posuere, urna arcu mollis arcu, non semper turpis lacus elementum odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id faucibus libero. Duis faucibus, lacus eget tempus posuere, urna arcu mollis arcu, non semper turpis lacus elementum odio.</p>
+				<div class="btn">
+					<button class="more">Ver más <span class="fas fa-search-plus"></span></button>
+					<button class="web">Ir a la web <span class="fas fa-globe"></span></button>
+				</div>
+			</div>
+
+			<div class="post">
+				<h2 class="title">Lorem ipsum dolor sit amet</h2>
+				<p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id faucibus libero. Duis faucibus, lacus eget tempus posuere, urna arcu mollis arcu, non semper turpis lacus elementum odio. </p>
+				<div class="btn">
+					<button class="more">Ver más <span class="fas fa-search-plus"></span></button>
+					<button class="web">Ir a la web <span class="fas fa-globe"></span></button>
+					<button class="follow">Seguir en instagram <span class="fab fa-instagram"></span></button>
+				</div>
+			</div>
+
+			<div class="post">
+				<h2 class="title">Lorem ipsum dolor sit amet.</h2>
+				<p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id faucibus libero.  </p>
+				<div class="btn">
+					<button class="follow">Seguir en instagram <span class="fab fa-instagram"></span></button>
+					<button class="web">Ir a la web <span class="fas fa-globe"></span></button>
+				</div>
+			</div>
+
+			<div class="post">
+				<h2 class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id faucibus libero. Duis faucibus</h2>
+				<p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id faucibus libero. Duis faucibus, lacus eget tempus posuere, urna arcu mollis arcu, non semper turpis lacus elementum odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id faucibus libero. Duis faucibus, lacus eget tempus posuere, urna arcu mollis arcu, non semper turpis lacus elementum odio.</p>
+				<div class="btn">
+					<button class="more">Ver más <span class="fas fa-search-plus"></span></button>
+					<button class="follow">Seguir en instagram <span class="fab fa-instagram"></span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

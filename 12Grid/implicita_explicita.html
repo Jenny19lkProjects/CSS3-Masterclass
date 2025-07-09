@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <link rel="stylesheet" href="estilos.css">
+
+     <style>
+          .grid{
+               display: grid;
+               gap: 20px;
+               grid-template-columns: 100px 1fr 100px;
+               grid-template-rows: 100px 200px 100px;
+
+
+               /* GRID IMPLICITA */
+               grid-auto-rows: 1fr;
+               grid-auto-columns: 1fr;
+
+
+               /* Especifico direccion */
+               grid-auto-flow: row dense;
+          }
+
+          .grid .expand2{
+               grid-column: span 2;
+               background: lightseagreen;
+          }
+
+          .grid .expand3{
+               grid-column: span 3;
+               background: violet;
+          }
+
+
+     </style>
+
+
+</head>
+<body>
+     <div class="grid">
+		<div>1</div>
+		<div class="expand2">2</div>
+		<div>3</div>
+		<div class="expand3">4</div>
+		<div class="expand2">5</div>
+		<div class="expand2">6</div>
+		<div>7</div>
+		<div>8</div>
+		<div class="expand2">9</div>
+		<div>10</div>
+		<div>11</div>
+		<div class="expand3">12</div>
+		<div>13</div>
+		<div class="expand2">14</div>
+		<div>15</div>
+          <div>16</div>
+          <div>17</div>
+          <div class="expand2">18</div>
+          <div>19</div>
+          <div>20</div>
+          <div class="expand3">21</div>	
+	</div>
+</body>
+</html>

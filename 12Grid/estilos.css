@@ -1,0 +1,26 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background: #e9ecf4;
+	font-family: sans-serif;
+}
+
+.grid{
+	width: 70%;
+	border: 5px solid #222;
+	margin:  50px auto;
+	font-size: 50px;
+}
+
+.grid div{
+	padding: 20px;
+	color: #fff;
+	line-height: 50px;
+	text-align: center;
+	background: #ff7600;
+    	border: 1px solid #bf5800;
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Card Overlay</title>
+
+     <style>
+          *{
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+               font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          }
+
+          body{
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               background: #222;
+               height: 100vh;
+          }
+
+          .container{
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               flex-wrap: wrap;
+          }
+
+
+          .card{
+               position: relative;
+               width: 320px;
+               height: 280px;
+               margin: 15px;
+               overflow: hidden;
+               box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.5);
+          }
+
+          .img, .content{
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+          }
+
+          .img img{
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+               object-position: center;
+          }
+
+          .content{
+               display: flex;
+               justify-content: center;
+               align-items: center;
+          }
+
+          .content::before{
+               content: '';
+               position: absolute;
+               left: 0;
+               top: 0;
+               width: 100%;
+               height: 100%;
+               background: #FFF;
+               transform: scaleX(0);
+               transition: transform .5s;
+               transform-origin: right;
+               transition-delay: 0.5s;
+          }
+
+
+          .card:hover .content::before{
+               transform: scaleX(1);
+               transform-origin: left;
+          }
+
+          .text{
+               z-index: 1;
+               padding: 30px;
+               transform: translateX(-300px);
+               transition: all .5s;
+          }
+
+          .card:hover .text{
+              transform: translateX(0); 
+              transition-delay: .8s;
+          }
+
+          .text h3{
+               font-size: 1.8em;
+               text-transform: uppercase;
+               letter-spacing: 1px;
+          }
+
+
+
+
+
+
+
+     </style>
+
+
+
+</head>
+<body>
+     <div class="container">
+          
+          <div class="card">
+               <div class="img">
+                    <img src="img/image4.jpg" alt="">
+               </div>
+
+               <div class="content">
+                    <div class="text">
+                         <h3>Titulo de post</h3>
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis temporibus quibusdam quod possimus ullam beatae.</p>
+                    </div>
+               </div>
+          </div>
+
+          <div class="card">
+               <div class="img">
+                    <img src="img/image5.jpg" alt="">
+               </div>
+
+               <div class="content">
+                    <div class="text">
+                         <h3>Titulo de post</h3>
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis temporibus quibusdam quod possimus ullam beatae.</p>
+                    </div>
+               </div>
+          </div>
+
+          <div class="card">
+               <div class="img">
+                    <img src="img/image6.jpg" alt="">
+               </div>
+
+               <div class="content">
+                    <div class="text">
+                         <h3>Titulo de post</h3>
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis temporibus quibusdam quod possimus ullam beatae.</p>
+                    </div>
+               </div>
+          </div>
+
+          <div class="card">
+               <div class="img">
+                    <img src="img/image7.jpg" alt="">
+               </div>
+
+               <div class="content">
+                    <div class="text">
+                         <h3>Titulo de post</h3>
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis temporibus quibusdam quod possimus ullam beatae.</p>
+                    </div>
+               </div>
+          </div>
+
+          <div class="card">
+               <div class="img">
+                    <img src="img/image8.jpg" alt="">
+               </div>
+
+               <div class="content">
+                    <div class="text">
+                         <h3>Titulo de post</h3>
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis temporibus quibusdam quod possimus ullam beatae.</p>
+                    </div>
+               </div>
+          </div>
+
+          <div class="card">
+               <div class="img">
+                    <img src="img/image9.jpg" alt="">
+               </div>
+
+               <div class="content">
+                    <div class="text">
+                         <h3>Titulo de post</h3>
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis temporibus quibusdam quod possimus ullam beatae.</p>
+                    </div>
+               </div>
+          </div>
+     </div>
+</body>
+</html>

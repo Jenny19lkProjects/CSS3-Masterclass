@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Galeria</title>
+
+     <style>
+          *{
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+          }
+
+          body{
+               display: grid;
+               place-items: center;
+               height: 100vh;
+               background: #000;
+          }
+
+          .grid-container{
+               width: 100%;
+               padding: 5px;
+               display: grid;
+               gap: 5px;
+
+               grid-template-columns: repeat(4, 1fr);
+               grid-template-rows: repeat(3, 210px);
+          }
+
+          .item{
+               transition: all .3s;
+          }
+
+          .grid-container:hover .item{
+               opacity: 0.2;
+          }
+
+          .item:hover{
+               opacity: 1 !important;
+          }
+
+          .item img{
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+          }
+
+          .r-span2{
+               grid-row: span 2;
+          }
+
+          .c-span2{
+               grid-column: span 2;
+          }
+
+     </style>
+
+
+</head>
+<body>
+     <div class="grid-container">
+          <div class="item r-span2">
+               <img src="img/bg1.jpg" alt="">
+          </div>
+
+          <div class="item c-span2">
+               <img src="img/bg2.jpg" alt="">
+          </div>
+
+          <div class="item r-span2">
+               <img src="img/bg3.jpg" alt="">
+          </div>
+
+          <div class="item">
+               <img src="img/bg4.jpg" alt="">
+          </div>
+
+          <div class="item">
+               <img src="img/bg5.jpg" alt="">
+          </div>
+
+          <div class="item c-span2">
+               <img src="img/bg6.jpg" alt="">
+          </div>
+
+          <div class="item c-span2">
+               <img src="img/bg7.jpg" alt="">
+          </div>
+     </div>
+</body>
+</html>
