@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+
+     <style>
+          :root{
+               --dark: #222;
+               --ligth: #DEDEDE;
+
+               --background: var(--dark);
+               --font-text: var(--ligth);
+          }
+          
+          body{
+               background-color: var(--background);
+               color: var(--font-text);
+               font-size: 40px;
+          }
+
+          .container{
+               padding: 20px;
+          }
+
+
+          div.img{
+               width: 200px;
+               height: 200px;
+               border-radius: 50%;
+               background: url(img/sun.jpg);
+               background-size: cover !important;
+               background-position: center !important;
+          }
+
+
+
+
+          /* MEDIA QUERY SCHEME */
+          @media (prefers-color-scheme: dark){
+               :root{
+                    --background: var(--dark);
+                    --font-text: var(--ligth);
+               }
+
+               div.img{
+                    background: url(img/moon.jpg);
+               }
+          }
+
+          @media (prefers-color-scheme: light){
+               :root{
+                    --background: var(--light);
+                    --font-text: var(--dark);
+               }
+          }
+          
+
+
+     </style>
+
+
+
+</head>
+<body>
+     <div class="container">
+          <div class="img"></div>
+          <h1>Hola mundo</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, illo quibusdam. Sunt earum sint quaerat harum molestias quis, voluptas modi maxime ipsum dolorum rem neque. Distinctio corporis nisi minima facilis.</p>
+     
+     </div>
+
+
+</body>
+</html>
