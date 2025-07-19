@@ -1,0 +1,39 @@
+h1 {
+  color: red;
+}
+
+.box, .box1, .box2, .box3, .box4, .box5, .box6 {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+}
+
+.box1 {
+  background: red;
+  border: 5px solid #740000;
+}
+
+.box2 {
+  background: blue;
+  border: 5px solid #000874;
+}
+
+.box3 {
+  background: green;
+  border: 5px solid #3af700;
+}
+
+.box4 {
+  background: orange;
+  border: 5px solid #743400;
+}
+
+.box5 {
+  background: pink;
+  border: 5px solid #000;
+}
+
+.box6 {
+  background: indigo;
+  border: 5px solid #000;
+}

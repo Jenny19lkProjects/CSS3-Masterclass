@@ -1,0 +1,22 @@
+.contenedor{
+     display: inline-block;
+     width: 300px;
+     border: 1px solid #000;
+     padding: 40px;
+     margin: 10px;
+}
+
+.contenedor-red{
+     @extend .contenedor;
+     background: crimson;
+}
+
+.contenedor-blue{
+     @extend .contenedor;
+     background: lightblue;
+}
+
+.contenedor-green{
+     @extend .contenedor;
+     background: lightgreen;
+}

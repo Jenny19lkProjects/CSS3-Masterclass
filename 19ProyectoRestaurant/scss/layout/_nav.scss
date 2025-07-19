@@ -1,0 +1,21 @@
+nav{
+     position: absolute;
+     top: 0;
+     z-index: 1;
+     width: 100%;
+     height: 50px;
+     background: rgba($color: #FFF, $alpha: 0.65);
+     @include dflex(center, center, row wrap);
+
+
+     a{
+          color: $gris700;
+          padding: 0 20px;
+          transition: all .3s;
+
+          &:hover{
+               color: $color-primario;
+          }
+     }
+
+}

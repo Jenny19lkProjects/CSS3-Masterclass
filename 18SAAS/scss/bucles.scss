@@ -1,0 +1,50 @@
+// BUCLES TEORIA
+
+// FOR
+@for $i from 1 through 6 {
+     
+     // interpolacion #{$i}
+     h#{$i}{
+          font-size: $i * 20em;
+     }
+}
+
+
+// WHILE
+$i: 6;
+
+@while $i > 0 {
+     h#{$i}{
+          font-size: $i * 2em;
+     }
+
+     $i: $i - 1;
+}
+
+
+
+// EACH
+$colores: (#0000ff, azul), (#ff1100, rojo), (#09ff00, verde), (#000, negro), (#ea00ff, rosa);
+
+@each $color, $nombre in $colores {
+     .text-#{$nombre}{
+        color: $color;
+     }  
+}
+
+
+
+// EJEMPLO DE BUCLES
+.box{
+     width: 200px;
+     height: 200px;
+     display: inline-block;
+     border: 1px solid #ccc;
+}
+
+@for $i from 1 through 20{
+     .box:nth-child(#{$i}){
+          background: #00061A * $i;
+     }
+
+}

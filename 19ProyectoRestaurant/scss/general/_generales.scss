@@ -1,0 +1,128 @@
+// GENERALES
+body{
+     font-family: "Poppins", sans-serif;
+}
+
+a{
+     text-decoration: none;
+}
+
+header, section{
+     padding: 100px 0;
+}
+
+.box-center{
+     width: 80%;
+     margin: auto;
+}
+
+h1.tprincipal{
+     font-family: "Merienda";
+     color: $white;
+     font-size: 12vmin;
+     font-weight: bold;
+}
+
+h1{
+     color: $white;
+     font-size: 10vmin;
+     font-weight: 600;
+     letter-spacing: 2px;
+     text-transform: uppercase;
+     text-align: center;
+}
+
+h2.tsecundario{
+     font-size: 4vmin;
+     text-align: center;
+     color: $white;
+     letter-spacing: 6px;
+     font-weight: 400;
+}
+
+h3{
+     margin-bottom: 70px;
+     text-transform: uppercase;
+     font-size: 35px;
+     color: $gris700;
+}
+
+h4{
+     color: $gris600;
+     font-weight: 400;
+     font-size: 30px;
+     text-transform: uppercase;
+}
+
+h5{
+     font-size: 20px;
+     font-weight: 400;
+}
+
+// Paleta de colores de texto gris
+@for $i from 1 through 8{
+     .text-solid#{$i}{
+          color: $gris700 * $i;
+     }
+}
+
+
+// Paleta de colores de background gris
+@for $i from 1 through 8{
+     .bg-solid#{$i}{
+          background: $gris700 * $i;
+     }
+}
+
+
+.text-primario{
+     color: $color-primario;
+}
+
+.bg-primario{
+     background: $color-primario;
+}
+
+.text-center{
+     text-align: center;
+}
+
+.text-lite{
+     font-family: "Merienda";
+}
+
+.border{
+     border: 1px solid $gris200;
+}
+
+.rounded{
+     border-radius: 5px;
+}
+
+.rounded-semi{
+     border-radius: 20px;
+}
+
+.rounded-full{
+     border-radius: 50%;
+}
+
+.line-space{
+     line-height: 40px;
+}
+
+.margin-bottom{
+     margin-bottom: 30px;
+}
+
+.margin-top{
+     margin-top: 30px;
+}
+
+.marginy{
+     margin: 30px 0;
+}
+
+.marginx{
+     margin: 0 30px;
+}

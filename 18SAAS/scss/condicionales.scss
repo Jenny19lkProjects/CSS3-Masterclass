@@ -1,0 +1,80 @@
+// Condicionales
+// TEORIA
+$color: purpura;
+
+h1{
+     @if ($color == azul) {
+          color: blue;
+     }
+     @else if ($color == verde){
+          color: green;
+     }
+     @else{
+          color: red;
+     }
+}
+
+
+
+// EJEMPLO
+@mixin  condicional($color) {
+     background: $color;
+
+     @if ($color == red){
+          border: 5px solid #740000;
+     }
+     @else if ($color == blue){
+          border:  5px solid #000874;
+     }
+     @else if ($color == orange){
+          border: 5px solid #743400;
+     }
+     @else if ($color == green){
+          border: 5px solid #3af700;
+     }
+
+     @else{
+          border: 5px solid #000;
+     }
+
+}
+
+
+
+
+
+.box{
+     width: 200px;
+     height: 200px;
+     display: inline-block;
+}
+
+.box1{
+     @extend .box;
+     @include condicional(red);
+}
+
+.box2{
+     @extend .box;
+     @include condicional(blue);
+}
+
+.box3{
+     @extend .box;
+     @include condicional(green);
+}
+
+.box4{
+     @extend .box;
+     @include condicional(orange);
+}
+
+.box5{
+     @extend .box;
+     @include condicional(pink);
+}
+
+.box6{
+     @extend .box;
+     @include condicional(indigo);
+}

@@ -1,0 +1,53 @@
+// Mapas son objetos
+$titulos: (
+     h1: 40px,
+     h2: 30px, 
+     h3: 20px,
+     h4: 15px, 
+     h5: 10px, 
+     h6: 8px
+);
+
+$colores: (
+     azul: blue,
+     rojo: red, 
+     verde: green
+);
+
+
+// ACCEDER A ELEMENTOS DEL MAPA
+h1{
+     font-size: map-get($titulos, h1);
+     color: map-get($colores, rojo);
+}
+
+
+// MEZCLAR ELEMENTOS DEL MAPA
+$titulosColores: map-merge($titulos, $colores);
+     // h1: 40px,
+     // h2: 30px, 
+     // h3: 20px,
+     // h4: 15px, 
+     // h5: 10px, 
+     // h6: 8px,
+     // azul: blue,
+     // rojo: red, 
+     // verde: green
+
+
+h1{
+     font-size: map-get($titulosColores, h1);
+     color: map-get($titulosColores, verde);
+}
+
+
+
+// ELIMINAR ELEMENTOS DEL MAPA
+$nuevoTitulo: map-remove($titulos, h1, h2, h3);
+     // h4: 15px, 
+     // h5: 10px, 
+     // h6: 8px
+
+h1{
+     font-size: map-get($nuevoTitulo, h4);
+}

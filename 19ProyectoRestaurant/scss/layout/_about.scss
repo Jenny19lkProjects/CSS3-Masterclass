@@ -1,0 +1,47 @@
+.about{
+     &__container{
+          @include dflex(space-between, flex-start, row wrap);
+
+
+          .content{
+               flex: 0 0 50%;
+
+
+               .icons{
+                    @include icons(70%, 70px, 70px);
+                    font-size: 30px;
+               }
+          }
+
+
+          .container_image{
+               position: relative;
+               flex: 0 0 400px;
+
+               &::before{
+                    content: '';
+                    position: absolute;
+                    top: 40px;
+                    left: -40px;
+                    width: 100%;
+                    height: 100%;
+                    background: $color-primario;
+                    z-index: -1;
+               }
+
+
+               img{
+                    width: 100%;
+                    height: 310px;
+                    object-fit: cover;
+                    box-shadow: 0 0 10px 2px rgba($color: #000000, $alpha: 0.2);
+                    transition: all .5s;
+
+                    &:hover{
+                         transform: scale(1.1);
+                    }
+               }
+          }
+
+     }
+}

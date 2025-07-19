@@ -1,0 +1,74 @@
+// ANTERIORMENTE EN CSS
+/*p{
+     font-size: 80px;
+     color: lightseagreen;
+}
+
+@media screen and (max-width: 900px) {
+     p{
+          font-size: 60px;
+          color: crimson;
+     }
+}
+
+@media screen and (max-width: 700px) {
+     p{
+          font-size: 40px;
+          color: greenyellow;
+     }
+}
+
+@media screen and (max-width: 400px) {
+     p{
+          font-size: 20px;
+          color: #000;
+     }
+}*/
+
+
+
+
+// EN SAAS
+$desktop: (max-width: 1200px);
+$tablets: (max-width: 600px);
+$phones: (max-width: 480px);
+
+@mixin desktop {
+     @media screen and #{$desktop} {
+          @content;
+     }
+}
+
+@mixin tablets {
+     @media screen and #{$tablets} {
+          @content;
+     }
+}
+
+@mixin phones {
+     @media screen and #{$phones} {
+          @content;
+     }
+}
+
+
+p{
+     font-size: 80px;
+     color: lightseagreen;
+
+
+     @include desktop(){
+          font-size: 60px;
+          color: crimson;
+     }
+
+     @include tablets(){
+          font-size: 40px;
+          color: greenyellow;
+     }
+
+     @include phones(){
+          font-size: 20px;
+          color: #000;
+     }
+}

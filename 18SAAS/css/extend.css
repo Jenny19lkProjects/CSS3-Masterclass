@@ -1,0 +1,19 @@
+.contenedor, .contenedor-red, .contenedor-blue, .contenedor-green {
+  display: inline-block;
+  width: 300px;
+  border: 1px solid #000;
+  padding: 40px;
+  margin: 10px;
+}
+
+.contenedor-red {
+  background: crimson;
+}
+
+.contenedor-blue {
+  background: lightblue;
+}
+
+.contenedor-green {
+  background: lightgreen;
+}

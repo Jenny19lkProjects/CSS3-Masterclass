@@ -1,0 +1,67 @@
+// VARIABLES
+$colorFondo: #ccc;
+$colorPrincipal: crimson;
+
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+     background: $colorFondo;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+}
+
+.articulo{
+     width: 500px;
+     height: 400px;
+     background: #FFF;
+     padding: 20px;
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     justify-content: center;
+     border: 2px solid $colorPrincipal;
+     transition: all .5s;
+
+
+     .titulo{
+          color: $colorPrincipal;  
+          font: {
+               size: 35px;
+               weight: 500;
+               style: italic;
+          }
+
+          text: {
+               align: center;
+               transform: uppercase;
+               shadow: 0 0 5px rgba(#000000, .5);
+          }
+     }
+
+     p{
+       line-height: 20px;
+       font-size: 18px;
+       text-align: justify;
+       margin: 10px 0;   
+     }
+
+
+     &:hover{
+          background: $colorPrincipal;
+          color:  #FFF;
+          box-shadow: 0 0 15px 5px rgba($colorPrincipal, 0.5);
+
+
+          .titulo{
+               color: #FFF;
+          }
+     }
+
+}
